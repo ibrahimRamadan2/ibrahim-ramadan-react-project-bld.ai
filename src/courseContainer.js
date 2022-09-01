@@ -3,28 +3,24 @@ import Card from "./Card";
 import "./mainContainer.css";
 
 function CourseContainer(props) {
-
   async function getApiData(url) {
     // fetch Data from API .
     let jsonData = await fetch(url);
     jsonData = await jsonData.json();
     return jsonData.courses;
   }
-  
-  let [coursesData , setCoursesData] = useState([]); 
 
-  useEffect(()=>{
-    console.log("123") ;
+  let [coursesData, setCoursesData] = useState([]);
+
+  useEffect(() => {
+    console.log("123");
     getApiData("http://localhost:3003/body").then((response) => {
-      setCoursesData(response); 
-    
-    })
-  } , [  ]);
+      setCoursesData(response);
+    });
+  }, []);
 
-  
-
-  if(coursesData.length === 0 ){
-    return <p> loading .....</p>
+  if (coursesData.length === 0) {
+    return <p> loading .....</p>;
   }
   return (
     <div className="container">
@@ -58,21 +54,19 @@ function CourseContainer(props) {
           </div>
           <button className="btn">Explore Python</button>
           <div id="courseCardSection" className="Cards">
-            {
-              coursesData.map( (course, index)=>{
-               return (
-                <Card 
-                  key ={index}
-                  className = {course.name}
-                  imagePath = {course.image}
-                  imageAlt= {course.author}
-                  instructor = {course.author}
-                  price = {course.price}
+            {coursesData.map((course, index) => {
+              return (
+                <Card
+                  key={index}
+                  className={course.name}
+                  imagePath={course.image}
+                  imageAlt={course.author}
+                  instructor={course.author}
+                  price={course.price}
                   rate={course.rate}
-               />
-               );
-             })
-            }
+                />
+              );
+            })}
           </div>
         </div>
       </div>

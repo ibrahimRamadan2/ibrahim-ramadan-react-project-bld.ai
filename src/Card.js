@@ -1,5 +1,5 @@
 import "./Card.css";
-import RateStars from "./RateStars"
+import RateStars from "./RateStars";
 function Card(props) {
   return (
     <div className="course-card">
@@ -15,7 +15,7 @@ function Card(props) {
         <p className="author-name">{props.instructor}</p>
         <div className="rate">
           <p className="rate-precent">{props.rate}</p>
-          <RateStars rateNumber={props.rate}/>
+          <RateStars rateNumber={props.rate} />
           <p className="student-num">(234)</p>
         </div>
         <p className="Price">E£{props.price}</p>
