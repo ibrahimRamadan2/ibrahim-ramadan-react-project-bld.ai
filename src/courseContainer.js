@@ -21,9 +21,7 @@ function CourseContainer(props) {
     })
   } , [  ]);
 
-  useEffect(() =>{
-    console.log(coursesData) ;
-  } , [coursesData])
+  
 
   if(coursesData.length === 0 ){
     return <p> loading .....</p>
@@ -70,6 +68,7 @@ function CourseContainer(props) {
                   imageAlt= {course.author}
                   instructor = {course.author}
                   price = {course.price}
+                  rate={course.rate}
                />
                );
              })

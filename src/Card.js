@@ -1,4 +1,5 @@
 import "./Card.css";
+import RateStars from "./RateStars"
 function Card(props) {
   return (
     <div className="course-card">
@@ -13,12 +14,8 @@ function Card(props) {
         <h3>{props.courseName}</h3>
         <p className="author-name">{props.instructor}</p>
         <div className="rate">
-          <p className="rate-precent">{4.6}</p>
-          <i className="fa-solid fa-star star-icon"></i>
-          <i className="fa-solid fa-star star-icon"></i>
-          <i className="fa-solid fa-star star-icon"></i>
-          <i className="fa-solid fa-star star-icon"></i>
-          <i className="fa-solid fa-star-half-stroke star-icon"></i>
+          <p className="rate-precent">{props.rate}</p>
+          <RateStars rateNumber={props.rate}/>
           <p className="student-num">(234)</p>
         </div>
         <p className="Price">E£{props.price}</p>
