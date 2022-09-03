@@ -1,0 +1,105 @@
+main-courses .courses .course-card {
+  width: min(226px, 40vw);
+  height: 240px;
+  margin-bottom: 60px;
+  margin-right: 15px;
+}
+.main-courses .courses .course-card .course-img {
+  width: inherit;
+  height: inherit;
+  box-shadow: 0.01px 0.5px 2px gray;
+}
+.main-courses .courses .course-card .text-div {
+  margin-top: 10px;
+  width: 100%;
+  height: auto;
+}
+.main-courses .courses .course-card .course-img-div {
+  width: 100%;
+  height: 120px;
+}
+.main-courses .courses .course-card h3 {
+  font-family: "Franklin Gothic Medium";
+  font-size: 17px;
+}
+
+.main-courses .courses .Cards {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  column-gap: 1.5%;
+  row-gap: 30px;
+  padding-right: 20px;
+}
+.main-courses .courses .Cards .course-card .star-icon {
+  color: rgb(229, 152, 25);
+  font-size: 12px;
+}
+
+.main-courses .courses .Cards .course-card .rate {
+  display: flex;
+  align-items: center;
+}
+.main-courses .courses .Cards .course-card .student-num {
+  font-size: 12px;
+  margin-bottom: 8px;
+  margin-left: 4px;
+  color: rgb(106, 116, 119);
+}
+.main-courses .courses .Cards .course-card .author-name {
+  font-size: 13px;
+  color: rgb(106, 116, 119);
+}
+.main-courses .courses .Cards .course-card .rate .rate-precent {
+  font-size: 15px;
+  margin-right: 4px;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: rgb(180, 105, 14);
+}
+.main-courses .courses .Cards .course-card p {
+  margin-top: 2px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.main-courses .courses .Cards .course-card .best-seller {
+  background-color: rgb(236, 235, 152);
+  width: 40%;
+  height: 17px;
+  margin-top: 15px;
+  text-align: center;
+}
+.main-courses .courses .Cards .course-card .best-seller p {
+  font-size: 12px;
+  font-weight: bold;
+}
+.main-courses .courses .Cards .course-card .new {
+  background-color: rgb(172, 210, 204);
+  width: 20%;
+  height: 17px;
+  text-align: center;
+}
+.main-courses .courses .Cards .course-card .new p {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+@media (max-width: 1000px) {
+  .main-courses .courses .Cards {
+    grid-template-columns: repeat(4, auto);
+  }
+}
+@media (max-width: 835px) {
+  .main-courses .courses .Cards {
+    grid-template-columns: repeat(3, auto);
+  }
+}
+@media (max-width: 540px) {
+  .main-courses .courses .Cards {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+@media (max-width: 400px) {
+  .main-courses .courses .Cards {
+    grid-template-columns: repeat(1, auto);
+  }
+}
