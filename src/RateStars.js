@@ -17,7 +17,8 @@ function RateStars(props) {
     } else halfStarNum = 0;
     let cnt = 0;
     for (let i = 0; i < FullStarNum; i++) arr[cnt++] = 1;
-    for (let i = 0; i < halfStarNum; i++) arr[cnt++] = 0.5;
+    if(halfStarNum)
+       arr[cnt++] = 0.5;
     return arr;
   }
   let [listofStart, setListofStar] = useState([]);

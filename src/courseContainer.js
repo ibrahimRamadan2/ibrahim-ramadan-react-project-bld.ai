@@ -58,7 +58,7 @@ function CourseContainer(props) {
               return (
                 <Card
                   key={index}
-                  className={course.name}
+                  courseName={course.name}
                   imagePath={course.image}
                   imageAlt={course.author}
                   instructor={course.author}
