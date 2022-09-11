@@ -1,0 +1,177 @@
+*{
+  margin: 0px;
+}
+nav { 
+  top: 0px;
+  z-index: 1231232;
+  display: flex;
+  align-items: center;
+  height: 75px;
+  box-shadow: 0px 1px 6px 1px gray;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: white;
+}
+nav .leftSide {
+  display: flex;
+  align-items: center;
+  padding-right: 15px;
+}
+nav .rightSide {
+  display: flex;
+  align-items: center;
+  padding-right: 15px;
+  position: absolute;
+  right: 4px;
+}
+nav p {
+  font-size: 13.5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 0px;
+  font-family: Arial;
+}
+nav p:hover {
+  color: rgb(91, 36, 208);
+}
+nav .logo:hover {
+  color: black;
+}
+.logo {
+  font-size: 25px;
+  font-weight: 550;
+  margin-left: 10px;
+}
+nav .search-form {
+  height: 45px;
+  width: calc(100vw - 754px);
+  display: flex;
+  padding: 2px;
+  
+  border: 1px solid currentColor;
+  border-radius: 25px;
+  background-color: rgb(247, 249, 250);
+}
+nav .searchBox {
+  border: 0px solid;
+  background: transparent;
+  margin: 0;
+  width: inherit;
+  padding: 7px 8px;
+  font-size: 15px;
+  color: inherit;
+  outline: none;
+  border-radius: inherit;
+}
+button[type="submit"] {
+   
+  text-indent: -999px;
+  overflow: hidden;
+  width: 40px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid transparent;
+  border-radius: inherit;
+  background: transparent
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E")
+    no-repeat center;
+  opacity: 0.7;
+}
+nav .btns {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+.btn-- {
+  font-size: 16px;
+  margin-right: 10px;
+  background-color: white;
+  border: 1.2px solid;
+  box-shadow: 0.5px 0.1px 1px 0.001px;
+  height: 40px;
+  width: 80px;
+  font-weight: bold;
+}
+.main-courses .courses-h1-head p {
+  word-break: break-all;
+  font-size: 35px;
+  height: auto;
+  font-family: "Times New Roman";
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  line-height: 0;
+}
+.main-courses .courses .btn-explore {
+  width: auto;
+  height: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.lang-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1.2px solid;
+  box-shadow: 0.5px 0.1px 1px 0.001px;
+}
+nav .navBox:hover {
+  background-color: rgb(245, 245, 245);
+}
+nav .btn2 {
+  background-color: black;
+  color: white;
+}
+/* /////////////////////////   media Query \\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+@media (max-width: 1024px) {
+  nav .search-form {
+    /* 390 */
+    /* 214 */
+    width: calc(100vw - 630px);
+  }
+  .rightSide .udemy-business {
+    display: none;
+  }
+}
+/* size */
+@media (min-width: 800px) {
+  nav .search-icon2,
+  nav .bar-icon {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  nav .rightSide {
+    display: none;
+  }
+  nav {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+  /* here is the bug  */
+  nav .leftSide {
+    margin-left: calc(100vw - 200px);
+  }
+}
+/*  middle  */
+@media (max-width: 800px) {
+  nav #lang-icon,
+  nav .udemy-categories,
+  .btn1,
+  .btn2,
+  nav .udemy-teach,
+  nav .search-form {
+    display: none;
+  }
+  nav .search-icon2 {
+    margin-right: 16px;
+  }
+  nav {
+    padding-left: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,33 @@
+import React, { useEffect} from "react";
+import { useDispatch, useSelector } from "react-redux";
+
+import "./App.css";
+
+import { getAllCourses } from "./store/coursesSlice";
+import HomePage from "./pages/homePage/homePage";
+import DetailsPage from "./pages/DetailsPage/DetailsPage";
+import {  Routes, Route, useNavigate } from "react-router-dom";
+import Navbar from "./components/home/navbar/Navbar"
+const App = () => {
+  const dispatch = useDispatch();
+  // console.log(courses);
+    
+  useEffect(() => {
+    dispatch(getAllCourses());
+  }, [dispatch]);
+   
+  return (
+    <div className={"app"}>
+      <Navbar/>
+      <Routes>
+        <Route path="/" element={<HomePage/>}/>  
+         <Route path="/:searchStr" element={<HomePage/>}/> 
+        <Route path="/details/:id" element={ <DetailsPage />}/> 
+      </Routes>  
+      {/* <DetailsPage /> */}
+       
+    </div>
+  );
+};
+
+export default App;

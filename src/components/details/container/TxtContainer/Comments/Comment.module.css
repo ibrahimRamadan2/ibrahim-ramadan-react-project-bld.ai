@@ -1,0 +1,19 @@
+.comment {
+  display: flex;
+  width: 400px;
+  justify-content: center;
+}
+
+.comment__rate {
+  display: flex;
+}
+
+.comment__content {
+  margin-left: 30px;
+}
+
+.comment__rating small {
+  color: #777;
+  
+  margin-left: 10px;
+}

@@ -1,0 +1,15 @@
+.main-container{
+    max-width: 1100px ; 
+    display: flex;
+    margin: auto;
+    position: relative;
+}
+.txt-container{
+    max-width: 700px;
+    padding-bottom: 70px;
+    padding-top: 60px;
+}
+
+
+
+ 

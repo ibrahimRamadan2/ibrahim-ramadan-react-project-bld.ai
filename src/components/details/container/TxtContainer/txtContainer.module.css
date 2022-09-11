@@ -1,0 +1,10 @@
+.txt-main-container{
+    width: 700px;
+     
+}
+@media (max-width : 1080px) {
+    .txt-main-container {
+        max-width: 600px;
+        margin: auto;
+    }
+}

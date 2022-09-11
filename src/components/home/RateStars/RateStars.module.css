@@ -1,0 +1,9 @@
+.star-icon {
+    color: rgb(229, 152, 25);
+    font-size: 12px;
+  }
+  .star-row{
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px;
+  }

@@ -1,0 +1,13 @@
+*{
+    box-sizing: border-box;
+}
+.course-img{
+    height: 337px;
+    width: 600px;
+    background-size: cover;
+}
+.img-div{
+    height: 50%;
+    width: 70%;
+    
+}

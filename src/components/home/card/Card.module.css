@@ -1,0 +1,80 @@
+ .course-card {
+  width: auto;
+  height: 240px;
+  margin-bottom: 60px;
+  margin-right: 15px;
+}
+.course-card .course-img {
+  width: inherit;
+  height: inherit;
+  box-shadow: 0.01px 0.5px 2px gray;
+}
+.course-card .text-div {
+  margin-top: 10px;
+  width: 100%;
+  height: auto;
+}
+.course-card .course-img-div {
+  width: 100%;
+  height: 120px;
+}
+.course-card h3 {
+  font-family: "Franklin Gothic Medium";
+  font-size: 17px;
+}
+
+
+.course-card .star-icon {
+  color: rgb(229, 152, 25);
+  font-size: 12px;
+}
+
+ .course-card .rate {
+  display: flex;
+  align-items: center;
+}
+.course-card .student-num {
+  font-size: 12px;
+  margin-bottom: 8px;
+  margin-left: 4px;
+  color: rgb(106, 116, 119);
+}
+ .course-card .author-name {
+  font-size: 13px;
+  color: rgb(106, 116, 119);
+}
+.course-card .rate .rate-precent {
+  font-size: 15px;
+  margin-right: 4px;
+  margin-bottom: 1px;
+  font-weight: bold;
+  color: rgb(180, 105, 14);
+}
+ .course-card p {
+  margin-top: 2px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.course-card .best-seller {
+  background-color: rgb(236, 235, 152);
+  width: 40%;
+  height: 17px;
+  margin-top: 15px;
+  text-align: center;
+}
+ .course-card .best-seller p {
+  font-size: 12px;
+  font-weight: bold;
+}
+ .course-card .new {
+  background-color: rgb(172, 210, 204);
+  width: 20%;
+  height: 17px;
+  text-align: center;
+}
+ .course-card .new p {
+  font-size: 12px;
+  font-weight: bold;
+}
+/*  ///////////////////*/
+ 

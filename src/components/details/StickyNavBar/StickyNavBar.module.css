@@ -1,0 +1,26 @@
+.nav-main {
+    position: sticky;
+    top:0;
+    align-items: center;
+    box-shadow: none;
+    z-index: 1;
+    height: 75px; 
+    background-color: #1C1D1F;
+  }
+  .nav-top p{
+    color: white ;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .nav-content{
+    text-decoration: none;
+    position: sticky;
+  }
+  .all-nav{
+    z-index: 100;
+    position: sticky;
+    top: 0px;
+  }
+  .course-info{
+    display: flex;
+  }

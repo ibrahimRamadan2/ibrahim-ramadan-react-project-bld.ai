@@ -1,0 +1,74 @@
+.container {
+  position: relative;
+  width: 100%;
+  margin: 5px auto;
+}
+.main-courses {
+  position: relative;
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 50px;
+}
+.main-courses h1{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 40px;
+  padding-bottom: 10px;
+}
+.main-courses p {
+  font-size: 20px;
+  font-family: sans-serif;
+  margin-left: 2px;
+}
+.main-courses .course-list {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.main-courses .course-list div {
+  font-size: 16px;
+  padding: 0px;
+  font-weight: 900;
+  color: rgb(106, 111, 115);
+  font-family: Arial;
+  margin-right: 20px;
+}
+.main-courses .course-list div:hover {
+  color: black;
+}
+.main-courses .course-list .apython {
+  color: black;
+}
+
+.main-courses .courses-h1-head p{
+  word-break: break-all ;
+  font-size: 35px;
+  height: auto;
+  font-family: 'Times New Roman';
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+    line-height: 0;
+}
+.main-courses .courses .btn-explore{
+  width: auto; 
+  height: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  font-size: 16px;
+  margin-top: 15px;
+  width: auto;
+  margin-bottom: 15px;
+  margin-right: 10px;
+  background-color: white;
+  border: 1.2px solid;
+  height: 40px;
+  font-weight: bold;
+}

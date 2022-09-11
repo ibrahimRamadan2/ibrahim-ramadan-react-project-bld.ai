@@ -1,0 +1,64 @@
+.main-div{
+    width: 340px;
+     position: sticky;
+     top: 20px;
+     z-index: 200;
+    box-shadow: 1px 1px 14px #888888;
+    background-color: white;
+}
+.img-div img {
+    width: 340px;
+    border: 1px solid white;
+}
+.content-div{
+    
+    padding:20px 20px
+}
+.price-div{
+    width: 292px;
+    margin-bottom: 20px;
+}
+.btns-txt{
+    margin-top: 10px;
+    font-size:13px ; 
+    color: rgb(106, 111, 115);
+    font-family: sans-serif;
+}
+.goal-item{
+    margin-bottom: 8px;
+}
+.course-links ul{
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+}
+.course-links a{
+    font-size: 16px;
+    color: #1C1D1F;
+    font-weight: bold; 
+}
+.main-div hr {
+    margin: 0px;
+}
+.last-div{
+    padding: 20px;
+}
+.last-div h3{
+    font-size: 18px;
+    font-weight: bold;
+}
+.last-div p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.CourseDetails{
+    margin-top: 10px;
+}
+.CourseDetails ul{
+    margin-top: 10px;
+    padding-left: 0px;
+}
+.main-content-div{
+    position: sticky;
+    top: 0;
+}
