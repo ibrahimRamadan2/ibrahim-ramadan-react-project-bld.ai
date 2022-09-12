@@ -1,7 +1,6 @@
 import React from "react";
 import classes from "./CardButton.module.css"
-function CardButton(props) {
-  console.log(props.data);
+function CardButton(props) { 
   return (
     <div className ={classes["card-div"]} style={{backgroundColor:`${props.backgroundColor}` , 
     border :`${props.color==="black" ? "1px solid black":"none"}`}}>

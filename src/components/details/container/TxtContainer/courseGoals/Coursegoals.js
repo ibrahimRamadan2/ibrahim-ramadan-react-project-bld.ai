@@ -1,12 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import CourseGoalitem from "./CourseGoalItem/CourseGoalitem";
 import classes from "./CourseGoals.module.css";
-function Coursegoals(props) {
-  let [courseGoals, setcourseGoals] = useState();
-  useEffect(() => {
-    
-    setcourseGoals(props.courseGoals);
-  }, [props.courseGoals]);
+function Coursegoals({courseGoals,sectionTitle,requirements}) {
+  
+   
 
   if (courseGoals === undefined || courseGoals === null) {
     return <div> loading ......</div>;
@@ -16,7 +13,7 @@ function Coursegoals(props) {
     <div className={classes["courseGoal"]}>
       <div className={`${classes["what-you-will-learn"]}`} style={{marginTop:"30"}}>
         <p>What you'll learn</p>
-        <p>{props.sectionTitle}</p>
+        <p>{sectionTitle}</p>
       </div>
 
       
@@ -24,7 +21,7 @@ function Coursegoals(props) {
         <ul
           className={`  ${classes["list"]}`}
           style={{
-            listStyleType: props.requirements ? "inherit" : "none",
+            listStyleType: requirements ? "inherit" : "none",
           }}
         >
           {courseGoals.map((goal, index) => {
@@ -33,7 +30,7 @@ function Coursegoals(props) {
                 iconName="fa-solid fa-check"
                 key={index}
                 data={goal}
-                requirements={props.requirements}
+                requirements={requirements}
               />
             );
           })}

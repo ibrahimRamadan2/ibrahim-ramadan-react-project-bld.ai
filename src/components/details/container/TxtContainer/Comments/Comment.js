@@ -5,8 +5,8 @@ import Description from "../Description/Description"
 import classes from "./Comment.module.css";
 import CommentFeedback from "./CommentFeedback";
 
-const Comment = (props) => {
-  let comment = props.data ; 
+const Comment = ({data}) => {
+  let comment = data ; 
    
   return (
     <div style={{marginTop:"30px"}} className={classes.comment}>

@@ -1,9 +1,9 @@
 import React from 'react'
 import classes from "./CourseImage.module.css"
-function CourseImage(props) {
+function CourseImage({imagePath}) {
   return (
     <div className={`${classes["img-div"]}`}>
-        <img className={`${classes["course-img"]}`} src={props.imagePath}></img>
+        <img className={`${classes["course-img"]}`} src={imagePath} alt=""></img>
     </div>
   )
 }

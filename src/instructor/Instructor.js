@@ -2,14 +2,14 @@ import React from "react";
 import classes from "./instructor.module.css";
 import CourseGoalitem from "../components/details/container/TxtContainer/courseGoals/CourseGoalItem/CourseGoalitem";
 import Description from "../components/details/container/TxtContainer/Description/Description";
-function Instructor(props) {
-  let data = props.data;
+function Instructor({data}) {
+ 
 
   return (
     <div className={`${classes["main-div"]}`}>
       <div className={`${classes["head-info"]}  `}>
         <div className="instructorLine">
-          <a href="" style={{ color: "#8710D8" }}>
+          <a href="12" style={{ color: "#8710D8" }}>
             {data.display_name}
           </a>
         </div>
@@ -18,7 +18,7 @@ function Instructor(props) {
       <div className={`${classes["img-and-data"]}`}>
         <div className="img-card">
           <div className="img-div">
-            <img className={``} src={data.image_100x100}></img>
+            <img className={``} src={data.image_100x100} alt=""></img>
           </div>
         </div>
         <div className={`${classes["info-list"]}`}>

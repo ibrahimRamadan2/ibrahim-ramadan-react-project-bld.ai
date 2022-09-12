@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from "react";
 import classes from "./courseContentCard.module.css";
 import CourseContentItem from "../courseContentItem/courseContentItem"
-function CourseContentCard(props) { // props.expand
+function CourseContentCard({data,expand}) { // props.expand
+  
   let [open , setopen] = useState(0);
   let [expandAll , setexpandAll] = useState(0);
-  let data = props.data ;  
+   
   let hours= parseInt(data.content_length_text.substring(0,2));
   let minute = parseInt(data.content_length_text.substring(3,5));
   function updateOpen(){
-    setopen((prev)=>1-prev);
-    console.log(props.expand + " - " + open);
+    setopen((prev)=>1-prev); 
   }
   useEffect(()=>{
-    setexpandAll(props.expand);
+    setexpandAll(expand);
       setopen(expandAll);
     
-  } ,[props.expand]);
+  } ,[expandAll, expand]);
   
   return (
     <div className="main-div" >
@@ -39,7 +39,7 @@ function CourseContentCard(props) { // props.expand
         </div>
       </div>
       <div className={classes["details"]} style={{display:`${open ? "":"none"}`}}>
-         {data.items.map((item)=><CourseContentItem data ={item} />)}
+         {data.items.map((item)=><CourseContentItem data ={item} key={item.id} />)}
          
         
           

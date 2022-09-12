@@ -3,9 +3,9 @@ import Container from "../../components/home/container/Container";
 import {useParams} from "react-router-dom" 
  
 
-function HomePage(props) {
+function HomePage() {
  let {searchStr} = useParams();
-   console.log(searchStr); 
+ 
    if(searchStr === undefined)
       searchStr="";
     

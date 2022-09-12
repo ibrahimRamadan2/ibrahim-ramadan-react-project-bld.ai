@@ -5,12 +5,12 @@ import HalfStarIcon from "../halfStarIcon/HalfStarIcon";
 import EmptyStarIcon from "../emptyStarIcon/EmptyStarIcon";
 import classes from "./RateStars.module.css";
 import { getarrayOfStars } from "../../../helper/helper";
-function RateStars(props) {
+function RateStars({rateNumber}) {
   let [listofStart, setListofStar] = useState([]);
 
   useEffect(() => {
-    setListofStar(getarrayOfStars(props.rateNumber));
-  }, []);
+    setListofStar(getarrayOfStars(rateNumber));
+  }, [rateNumber]);
   
   return (
     <div className={`${classes["star-row"]}`}>

@@ -2,13 +2,11 @@ import React from "react";
 import CardButton from "../CardButton/CardButton";
 import classes from "./CourseCard.module.css";
 import CourseGoalitem from "../../details/container/TxtContainer/courseGoals/CourseGoalItem/CourseGoalitem";
-function CourseCard(props) {
-  let courseData = props.courseData;
-  console.log(courseData);
+function CourseCard({ courseData }) {
   return (
     <>
       <div className={`${classes["img-div"]}`}>
-        <img src={courseData.image_750x422}></img>
+        <img src={courseData.image_750x422} alt=""></img>
       </div>
       <div className={`${classes["main-div"]}`}>
         <div className={classes["main-content-div"]}>
@@ -24,8 +22,16 @@ function CourseCard(props) {
                 E£{courseData.price.list_price.amount}
               </p>
             </div>
-            <CardButton data={"Add to card"} backgroundColor="rgb(135, 16, 216)" color="white" />
-            <CardButton data={"Buy now"} backgroundColor="transparent" color="black" />
+            <CardButton
+              data={"Add to card"}
+              backgroundColor="rgb(135, 16, 216)"
+              color="white"
+            />
+            <CardButton
+              data={"Buy now"}
+              backgroundColor="transparent"
+              color="black"
+            />
             <div style={{ textAlign: "center" }}>
               <p className={`${classes["btns-txt"]}`}>
                 30-Day Money-Back Guarantee
@@ -86,19 +92,21 @@ function CourseCard(props) {
             <div className={classes["course-links"]}>
               <ul style={{ listStyleType: "none" }}>
                 <li>
-                  <a style={{ fontSize:"14"}} href="">Share</a>
+                  <a style={{ fontSize: "14" }} href="1">
+                    Share
+                  </a>
                 </li>
                 <li>
-                  <a href="">Gift this course</a>
+                  <a href="1">Gift this course</a>
                 </li>
                 <li>
-                  <a href="">Apply Coupon</a>
+                  <a href="1">Apply Coupon</a>
                 </li>
               </ul>
             </div>
           </div>
 
-          <hr class="solid"></hr>
+          <hr className="solid"></hr>
           <div className={classes["last-div"]}>
             <h3>Training 5 or more people?</h3>
             <p>

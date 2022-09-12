@@ -1,31 +1,30 @@
-import React, { useEffect, useState } from "react";
-import { Link , link} from "react-router-dom";
+ 
+import { Link } from "react-router-dom";
 import Card from "../card/Card";
 import classes from './CardsSection.module.css'
 
 
-function CardsSection(props) {
-  let searchWord = props.searchStr ; 
+function CardsSection({coursesData,searchStr,title,decription,buttonText}) {
+  let searchWord = searchStr ; 
   
-  let coursesData=props.coursesData.filter((course)=>(course.title.toLowerCase().includes(searchWord.toLowerCase()))) ;
+  let coursesData2=coursesData.filter((course)=>(course.title.toLowerCase().includes(searchWord.toLowerCase()))) ;
     if(coursesData===undefined){
       return (<div>loading ....</div>);
     }
     return (
     <div className={classes["courses"]}>
-      <h2>{props.title}</h2>
+      <h2>{title}</h2>
       <div className={classes["courses-header"]}>
-        <p>{props.decription}</p>
+        <p>{decription}</p>
       </div>
-      <button className={classes["btn"]}>Explore {props.buttonText}</button>
+      <button className={classes["btn"]}>Explore {buttonText}</button>
       <div className={classes["Cards"]}>
         {
-          coursesData.map((course, index) => {
+          coursesData2.map((course, ) => {
           
           return <Link to={`/details/${course.id}`} style={{ textDecoration: 'none' }} >
-            <Card key={index} courseData={course} />
-            </Link>;
-         // return <div>{course.title}</div>;
+            <Card key={course.id} courseData={course} />
+            </Link>; 
         })} 
       </div>
     </div>

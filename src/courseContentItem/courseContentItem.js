@@ -1,7 +1,7 @@
 import React from 'react'
 import classes from "./courseContentItem.module.css"
-function CourseContentItem(props ) {
-  let data = props.data ;  
+function CourseContentItem({data} ) {
+   
   let hours= parseInt(data.content_summary.substring(0,2));
   let minute = parseInt(data.content_summary.substring(3,5));
   return (

@@ -1,10 +1,10 @@
 import React from "react";
 import classes from "./StickyNavBar.module.css";
-import { convertIntRate } from "../../../helper/helper";
-import { FullStarIcon } from "../../home/fullStarIcon/FullStarIcon";
+import { convertIntRate } from "../../../helper/helper"; 
 
-function StickyNavBar(props) {
-  let courseData = props.data;
+function StickyNavBar({data}) {
+  
+  let courseData = data;
   // get course sammry
   return (
     <div className={classes["all-nav"]}>
@@ -27,7 +27,7 @@ function StickyNavBar(props) {
                   style={{ color: "#F3CA8C" }}
                 ></i>
               </div>
-              <a href="" style={{ color: "#CEC0FC" }}>
+              <a href="12" style={{ color: "#CEC0FC" }}>
                 ( {courseData.num_reviews} ratings)
               </a>
               <p style={{fontSize:"20px", color: "white" }}>{courseData.num_subscribers} students</p>

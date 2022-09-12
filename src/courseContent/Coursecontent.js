@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
 import classes from "./CourseContent.module.css"
 import CourseContentCard from "../courseContentCard/courseContentCard"
-import CardButton from "../components/UI/CardButton/CardButton"
-function Coursecontent(props) {
+ 
+function Coursecontent({data}) {
    let [expandAll , setexpandAll] =  useState(0);
    function UpdateExpandAll(){
     setexpandAll((prev)=>1-prev);
    }
     
    // props.courseID
-   let data =props.data ;
+   
    let time = data.curriculum_context.data.estimated_content_length_text ;
    let sections=(data.curriculum_context.data.sections);
    
@@ -30,8 +30,8 @@ function Coursecontent(props) {
                 <p  href='' onClick={UpdateExpandAll}>Expand all sections</p>
             </div>
         </div>
-        {/* courseContentCard */}
-        {sections.map((section)=><CourseContentCard data={section} expand = {expandAll}/>)}
+      
+        {sections.map((section)=><CourseContentCard key={section.index} data={section} expand = {expandAll}/>)}
         
         
     </div>  
@@ -39,7 +39,4 @@ function Coursecontent(props) {
 }
 
 export default Coursecontent
-{/*         <CardButton
-              color="black"
-              backgroundColor="transparent"
-            ></CardButton> */}
+ 

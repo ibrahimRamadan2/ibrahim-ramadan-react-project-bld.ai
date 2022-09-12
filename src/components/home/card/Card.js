@@ -1,12 +1,8 @@
 import RateStars from "../RateStars/RateStars";
-import { useState, useEffect } from "react";
+ 
 import { convertIntRate } from "../../../helper/helper";
 import classes from "./Card.module.css";
-function Card(props) {
-  let [courseData, setCourseData] = useState();
-  useEffect(() => {
-    setCourseData(props.courseData);
-  }, [props.courseData]);
+function Card({courseData}) {
   if (courseData === undefined) {
     return <div>loading ..... </div>;
   }

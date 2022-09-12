@@ -3,7 +3,7 @@ import classes from './NavBar.module.css';
 import { useNavigate } from "react-router-dom";
 function Navbar() {
   let [searchValue , setSearchValue] = useState("");
-
+  
   function updatesearchValue(e){
     setSearchValue(e.target.value);
   }

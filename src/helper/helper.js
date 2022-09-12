@@ -1,4 +1,4 @@
-import { useSelector } from "react-redux";
+ 
 
 export async function getApiData(url) {
   // fetch Data from API .

@@ -2,20 +2,20 @@ import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
 import CourseCard from "../../../UI/courseCard/CourseCard"
 import classes from "./cardContainer.module.css"
-function CardContainer(props) { 
+function CardContainer({courseData}) { 
   let [courseSummary, setcourseSummary] = useState();
   let [courseDetails, setcourseDetails] = useState();
   let [courseReviews, setcourseReviews] = useState();
-  let courseData= props.courseData; 
-  console.log(courseData);
-  const { data, isLoading, allCourses, review } = useSelector(
+   
+  
+  const { data,  allCourses, review } = useSelector(
     (state) => state.courses
   );
   useEffect(() => {
     function getCouseDataById(courseID) {
       let arr = undefined;
       for (let item in data) {
-        if (data[item].id == courseID) {
+        if (data[item].id.toString() === courseID.toString()) {
           arr = data[item];
           break;
         }
@@ -25,7 +25,7 @@ function CardContainer(props) {
     function getCourseSummaryById(courseID) {
       let arr2;
       for (let item in allCourses) {
-        if (allCourses[item].id == courseID) {
+        if (allCourses[item].id.toString() === courseID.toString()) {
           arr2 = allCourses[item];
           break;
         }
@@ -36,7 +36,7 @@ function CardContainer(props) {
     function getCourseReviewById(courseID) {
       let arr;
       for (let item in review) {
-        if (review[item].id == courseID) {
+        if (review[item].id.toString() === courseID.toString()) {
           arr = review[item];
           break;
         }
@@ -47,7 +47,7 @@ function CardContainer(props) {
     getCouseDataById(courseData.id);
     getCourseSummaryById(courseData.id);
     getCourseReviewById(courseData.id);
-  }, [allCourses, data, review]);
+  }, [allCourses, courseData.id, data, review]);
 
   if (
     courseReviews === undefined ||

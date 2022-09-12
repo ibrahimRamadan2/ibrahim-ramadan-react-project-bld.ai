@@ -1,19 +1,20 @@
 import React, { useState } from "react";
 
-function Description(props) {
+function Description({data,title}) {
   let [clicked, setclicked] = useState(0);
   function updateClick() {
     setclicked((prev) => 1 - prev);
   }
-  let text = props.data;
-  let title = props.title; 
+  
+  let text = data;
+  let titlee = title; 
   let len = Math.min(300, text.length);
   return (
     // here you will take data from  data.course.details.description .. (just a string ).
     <div>
       <div
         style={{
-          display: `${!title.length ? "none" : ""}`,
+          display: `${!titlee.length ? "none" : ""}`,
           marginTop: "30px",
           marginBottom: "20px",
         }}

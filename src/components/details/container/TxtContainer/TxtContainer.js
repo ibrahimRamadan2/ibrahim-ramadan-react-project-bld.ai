@@ -8,19 +8,19 @@ import InstructorSection from "../../../../instructorSection/instructorSection";
 import Comment from "./Comments/Comment"
 import { useSelector } from "react-redux";
 
-function TxtContainer(props) {
+function TxtContainer({courseId}) {
   let [courseSummary, setcourseSummary] = useState();
   let [courseDetails, setcourseDetails] = useState();
   let [courseReviews, setcourseReviews] = useState();
 
-  const { data, isLoading, allCourses, review } = useSelector(
+  const { data, allCourses, review } = useSelector(
     (state) => state.courses
   );
   useEffect(() => {
     function getCouseDataById(courseID) {
       let arr = undefined;
       for (let item in data) {
-        if (data[item].id == courseID) {
+        if (data[item].id.toString() === courseID.toString()) {
           arr = data[item];
           break;
         }
@@ -30,7 +30,7 @@ function TxtContainer(props) {
     function getCourseSummaryById(courseID) {
       let arr2;
       for (let item in allCourses) {
-        if (allCourses[item].id == courseID) {
+        if (allCourses[item].id.toString() === courseID.toString()) {
           arr2 = allCourses[item];
           break;
         }
@@ -41,18 +41,20 @@ function TxtContainer(props) {
     function getCourseReviewById(courseID) {
       let arr;
       for (let item in review) {
-        if (review[item].id == courseID) {
+     
+        if (review[item].id.toString() === courseID.toString()) {
           arr = review[item];
           break;
         }
       } 
       setcourseReviews(arr);
     }
+    
     // should send the id yasta ...
-    getCouseDataById(props.courseId);
-    getCourseSummaryById(props.courseId);
-    getCourseReviewById(props.courseId);
-  }, [allCourses, data, review]);
+    getCouseDataById(courseId);
+    getCourseSummaryById(courseId);
+    getCourseReviewById(courseId);
+  }, [allCourses, data, courseId, review]);
 
   if (
     courseReviews === undefined ||
@@ -71,22 +73,11 @@ function TxtContainer(props) {
       <Requirements data={courseDetails.details.Requirements} />
       <Description title=" decribe" data={courseDetails.details.description} />
       <InstructorSection data={courseSummary.visible_instructors} />
-       {courseReviews.results.map((comment)=><Comment data = {comment}/>)}
+       {courseReviews.results.map((comment)=><Comment key={comment.id} data = {comment}/>)}
        
     </div>
   );
 }
-
-{
-  /* <txt Container > 
-                      <Coursegoals  />    ok 
-                    <CoutseContent sammry >  ok 
-                    requirements    ok 
-                    description ok 
-                    instructors  ok 
-                    student FeedBack 
-                    Reviews
-    </txt Container > */
-}
+ 
 
 export default TxtContainer;

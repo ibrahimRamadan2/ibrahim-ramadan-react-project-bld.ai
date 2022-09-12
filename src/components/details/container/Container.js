@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React  from "react";
 import classes from "./Container.module.css";
 import TxtContainer from "./TxtContainer/TxtContainer";
 import CardContainer from "./CardContainer/CardContainer";
  
-function Container(props) {
+function Container({courseData}) {
   return (
     <div className={`${classes["main-container"]}`}>
-      <TxtContainer  courseId = {props.courseData.id}/>
-      <CardContainer courseData = {props.courseData}/>
+      <TxtContainer  courseId = {courseData.id}/>
+      <CardContainer courseData = {courseData}/>
       
     </div>
   );
