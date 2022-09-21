@@ -1,0 +1,91 @@
+
+  a{
+      text-decoration: none;
+  }
+
+ .courses {
+    width: inherit;
+    padding-left: 30px;
+    padding-top: 35px;
+    box-shadow: 0.01px 0.5px 2px gray;
+    height: auto;
+    position: relative;
+  }
+   .courses h2 {
+    font-family: Arial;
+    font-size: 22px;
+    font-weight: bold;
+  }
+ .courses p {
+    font-size: 15px;
+    font-family: sans-serif;
+    margin: 0px;
+  }
+ .courses .courses-header {
+    margin-top: 10px;
+    width: 70%;
+  }
+ .courses .btn {
+    font-size: 12.6px;
+    margin-top: 15px;
+    width: 110px;
+    border: 0.5 solid gray;
+    margin-bottom: 15px;
+  }
+ 
+ 
+  
+ 
+  
+  /* /////////// */
+    .courses .btn-explore{
+    width: auto; 
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    font-size: 16px;
+    margin-top: 15px;
+    width: auto;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    background-color: white;
+    border: 1.2px solid;
+    height: 40px;
+    font-weight: bold;
+  }
+  
+
+
+/* ///////////////////////////////////////// */
+
+.courses .Cards {
+    width: inherit;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  column-gap: 1.1%;
+  row-gap: 30px;
+  padding-right: 10px;
+}
+@media (max-width: 1000px) {
+  .courses .Cards {
+    grid-template-columns: repeat(4, auto);
+  }
+}
+@media (max-width: 835px) {
+  .courses .Cards {
+    grid-template-columns: repeat(3, auto);
+  }
+}
+@media (max-width: 540px) {
+  .courses .Cards {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+@media (max-width: 400px) {
+  .courses .Cards {
+    grid-template-columns: repeat(1, auto);
+  }
+}

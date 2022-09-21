@@ -1,0 +1,90 @@
+.footer {
+  margin-top: 50px;
+  padding: 30px;
+  background-color: #1c1d1f;
+  color: #fff;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer > div:not(:last-child) {
+  padding: 30px 0;
+  border-bottom: 1px solid #fff5;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top h3{
+  font-size: 24px;
+}
+.top a {
+  color: #cec0fc;
+}
+@media (max-width: 992px) {
+  .top {
+    flex-direction: column;
+  }
+}
+
+.top > div img {
+  height: 44px;
+  margin: 24px 12px 24px 0;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.middle,
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+
+.middle a {
+  color: #fff;
+  margin-top: 10px;
+}
+
+.middle a:hover {
+  border-bottom: 1px solid #fff;
+}
+
+@media (max-width: 700px) {
+  .middle,
+  .bottom {
+    flex-direction: column;
+  }
+
+  .middle button {
+    margin-top: 15px;
+  }
+}
+
+.middle button {
+  background-color: transparent;
+  padding: 15px 20px;
+  color: #fff;
+  border: 1px solid #fff;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.middle button i {
+  color: #fff;
+  margin-right: 10px;
+}
+
+.middle button:hover {
+  background-color: #fff2;
+}
+
+.bottom a img {
+  width: 100px;
+}

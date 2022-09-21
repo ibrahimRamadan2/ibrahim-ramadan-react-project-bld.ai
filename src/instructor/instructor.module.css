@@ -1,0 +1,36 @@
+.main-div{
+    margin-top: 40px;
+}
+ .main-div h3{
+    font-weight: bold;
+    font-family: sans-serif;
+ }
+.head-info{
+    margin-bottom: 15px;
+}
+.head-info a{
+    font-size: 20px;
+    
+    font-weight: bold;
+}
+.img-and-data{
+    display: flex;
+}
+.info-list {
+    margin-top: 8px;
+}
+.img-and-data img{
+    width: 120px;
+    height: 120px;
+    border-radius: 100px;
+}
+.info-list ul{
+    list-style-type: none;
+}
+.info-list ul li {
+    margin-bottom: 5px;
+}
+.instructor-info{
+    font-size: 20px;
+    color: rgb(106, 111, 115);
+}

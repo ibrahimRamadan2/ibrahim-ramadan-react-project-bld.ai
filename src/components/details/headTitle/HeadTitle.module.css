@@ -1,0 +1,91 @@
+.main-page{
+    background-color: rgb(28, 29, 31);
+    height: auto;
+    padding-bottom: 60px;
+}
+ .txt-container p ,.txt-container div {
+    color: aliceblue;
+ }
+.txt-container a{
+    color: rgb(206, 192, 252);
+ }
+.txt-container{
+    max-width: 700px;
+    padding-bottom: 3s5px;
+padding-top: 60px;
+}
+.container{
+    max-width: 1100px ; 
+    margin: auto;
+}
+.title{
+    font-size: 33px;
+    margin-bottom: 15px;
+    color: white;
+}
+.headline{
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: white;
+}
+.authon-line{
+    margin-bottom: 10px; 
+}
+.rate{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.spc{
+    margin-right: 5px;
+}
+.spc2{
+    margin-right: 10px;
+}
+ 
+.flx{
+    display: flex;
+    align-items: center;
+    margin-right: 23px;
+}
+
+.rate .rateNumber{
+    color : rgb(243, 202, 140) ; 
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.course-links ul{
+    margin-top: 30px;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+}
+.course-links a{
+    font-size: 18px;
+    color: white;
+    font-weight: bold; 
+}
+.innerCard{
+    margin-top: 15px;
+}
+/*  Media Queries */
+@media (min-width : 1080px) {
+    .course-mid-img{
+        display: none;
+    }
+    .innerCard{
+        display: none;
+    }
+}
+@media (max-width : 1080px) {
+    .container{
+        max-width: 600px ; 
+    }
+    .last-update-line{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
